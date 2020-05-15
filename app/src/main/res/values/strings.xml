@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DVT Weather App</string>
+    <string name="OPEN_WEATHER_MAP_API_KEY">667d03c9388171e1fb60e7e91947d0cd</string>
 </resources>
