@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.dvt.dvtweatherapp.R;
 import com.dvt.dvtweatherapp.implementation.OpenWeatherMapHelper;
@@ -14,11 +15,15 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
+    TextView tvTemperature, tvMinTemperature, tvCurrent, tvMaxTemperature;
+;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initialize();
         //Instantiate Class With Your ApiKey As The Parameter
         OpenWeatherMapHelper helper = new OpenWeatherMapHelper(getString(R.string.OPEN_WEATHER_MAP_API_KEY));
 
@@ -27,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
         helper.getCurrentWeatherByCityName("Cape Town", new CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
-                Log.v(TAG,
-                        "Coordinates: " + currentWeather.getCoord().getLat() + ", "+currentWeather.getCoord().getLon() +"\n"
-                                +"Weather Description: " + currentWeather.getWeather().get(0).getDescription() + "\n"
-                                +"Temperature: " + currentWeather.getMain().getTempMax()+"\n"
-                                +"Wind Speed: " + currentWeather.getWind().getSpeed() + "\n"
-                                +"City, Country: " + currentWeather.getName() + ", " + currentWeather.getSys().getCountry()
-                );
+
+                tvTemperature.setText(currentWeather.getMain().getTemp() +" \u2103"+"\n" +
+                        currentWeather.getWeather().get(0).getDescription());
+
+                tvMinTemperature.setText(currentWeather.getMain().getTempMin()+" \u2103" +"\n" +"min");
+                tvCurrent.setText(currentWeather.getMain().getTemp()+" \u2103" +"\n" +"max");
+                tvMaxTemperature.setText(currentWeather.getMain().getTempMax()+" \u2103" +"\n" +"max");
             }
 
             @Override
@@ -42,5 +47,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        }
+    private void initialize(){
+
+        tvTemperature = findViewById(R.id.tvTemperature);
+        tvMinTemperature = findViewById(R.id.tvMinTemperature);
+        tvCurrent = findViewById(R.id.tvCurrent);
+        tvMaxTemperature = findViewById(R.id.tvMaxTemperature);
+
     }
+
+
+
 }
