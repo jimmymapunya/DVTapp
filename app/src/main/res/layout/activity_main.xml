@@ -30,7 +30,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/tvMinTemperature"
@@ -67,8 +68,156 @@
         android:id="@+id/forecast_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/cloudy">
+        android:background="@color/cloudy"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tuesday"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wednesday"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thursday"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Friday"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saturday"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_dialog" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_dialog"
+                android:paddingTop="16dp"/>
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_dialog"
+                android:paddingTop="16dp"/>
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_dialog"
+                android:paddingTop="16dp"/>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_dialog"
+                android:paddingTop="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/temperature1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/temperature2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/temperature3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="25"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/temperature4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/temperature5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:paddingTop="21dp"
+                android:gravity="right"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 
